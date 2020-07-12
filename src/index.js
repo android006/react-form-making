@@ -1,2 +1,2 @@
-export { default as WidgetForm } from './components/WidgetForm';
-export { default as MobileWidgetForm } from './components/MobileWidgetForm';
+import WidgetForm from './components/WidgetForm';
+import MobileWidgetForm from './components/MobileWidgetForm';

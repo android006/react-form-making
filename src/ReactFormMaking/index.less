@@ -1,0 +1,337 @@
+@import "../less/variables";
+
+.IndexPage-Container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: #FFFFFF;
+
+  .IndexPage-Left {
+    width: 250px;
+    height: 100%;
+    border-right: 1px #cccccc solid;
+
+    .IndexPage-Left-Title {
+      font-size: 15px;
+      padding: 20px 0 10px 10px;
+    }
+
+    .IndexPage-Left-List {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 10px;
+
+      .IndexPage-Left-List-Item {
+        width: 48%;
+        margin-right: 2%;
+        margin-bottom: 2%;
+        font-size: 12px;
+        cursor: move;
+        background: #f4f6fc;
+        border: 1px solid #f4f6fc;
+        padding: 4px 0;
+
+        i {
+          padding: 0 4px;
+        }
+
+        &:nth-child(even) {
+          margin-right: 0;
+        }
+
+        &:hover {
+          color: #409eff;
+          border: 1px dashed #409eff;
+        }
+      }
+    }
+  }
+
+  .IndexPage-Center {
+    flex: 1;
+    height: 100%;
+
+    .IndexPage-Center-Form {
+      width: 100%;
+      height: 100%;
+
+      .IndexPage-Center-Header {
+        display: flex;
+        justify-content: flex-end;
+        height: 45px;
+        align-items: center;
+        border-bottom: 2px solid #e4e7ed;
+
+        .IndexPage-Center-Header-Item {
+          color: #1682e6;
+          margin-right: 14px;
+          font-size: 14px;
+          cursor: pointer;
+        }
+      }
+
+      .IndexPage-Center-Content {
+        background: #fafafa;
+        height: calc(~"100% - 60px");
+        position: relative;
+
+        .IndexPage-Center-Content-Wrap {
+          width: calc(~"100% - 20px");
+          height: calc(~"100% - 10px");
+          overflow-y: auto;
+          overflow-x: hidden;
+          margin: 10px auto 0 auto;
+          border: 1px dashed #999;
+          background: #FFF;
+
+          .widget-form-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            min-height: 43px;
+
+            .empty {
+              position: absolute;
+              text-align: center;
+              font-size: 20px;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              color: #ccc;
+            }
+
+            .widget-form-wrap {
+              padding: 2px;
+
+              .widget-form-item {
+                position: relative;
+                border: 1px dashed hsla(0, 0%, 66.7%, .5);
+                background-color: rgba(236, 245, 255, .3);
+                margin: 2px 0;
+                padding-top: 2px;
+                min-height: 50px;
+
+                .configItem {
+                  position: relative;
+
+                  &:after {
+                    content: '';
+                    position: absolute;
+                    z-index: 2;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                  }
+                }
+
+                &:hover {
+                  background: #ecf5ff;
+                  outline: 1px solid #409eff;
+                  outline-offset: 0;
+                }
+
+                .item-icon-move {
+                  position: absolute;
+                  left: -2px;
+                  top: -2px;
+                  bottom: -18px;
+                  height: 28px;
+                  line-height: 28px;
+                  background: #409eff;
+                  z-index: 10;
+
+                  i {
+                    font-size: 14px;
+                    color: #fff;
+                    margin: 0 5px;
+                    cursor: move;
+                  }
+                }
+
+                .item-paramName-text {
+                  position: absolute;
+                  top: -2px;
+                  right: 2px;
+                  font-size: 12px;
+                  color: #67c23a;
+                  z-index: 9;
+                  font-weight: 500;
+                }
+
+                .item-icon-btn {
+                  position: absolute;
+                  right: 0;
+                  bottom: 0;
+                  height: 28px;
+                  line-height: 28px;
+                  background: #409eff;
+                  z-index: 9;
+
+                  i {
+                    font-size: 14px;
+                    color: #fff;
+                    margin: 0 5px;
+                    cursor: pointer;
+                  }
+                }
+              }
+
+              .widget-form-item.active {
+                outline: 2px solid #409eff;
+                border: 1px solid #409eff;
+              }
+            }
+
+            .widget-form-row {
+              .widget-form-row-wrap {
+                padding: 6px;
+
+                .widget-form-col-wrap {
+                  border: 1px dashed hsla(0, 0%, 66.7%, .5);
+                  background-color: rgba(236, 245, 255, .3);
+                }
+              }
+
+              .widget-form-item {
+                &:hover {
+                  background: #fdf6ec;
+                  outline: 1px solid #e6a23c;
+                  outline-offset: 0;
+                }
+
+                .item-icon-move, .item-icon-btn {
+                  background: #e6a23c;
+                }
+              }
+
+              .widget-form-item.active {
+                outline: 2px solid #e6a23c;
+                border: 1px solid #e6a23c;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  .IndexPage-Right {
+    width: 300px;
+    border-left: 1px #cccccc solid;
+    height: 100%;
+
+    .IndexPage-Right-Header {
+      display: flex;
+      align-items: center;
+      height: 45px;
+      border-bottom: 2px solid #e4e7ed;
+
+      .IndexPage-Right-Header-Item {
+        flex: 1;
+        cursor: pointer;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      .active-item {
+        position: relative;
+
+        &:before {
+          content: "";
+          width: 100%;
+          height: 2px;
+          position: absolute;
+          left: 0;
+          bottom: -13px;
+          background: #409eff;
+        }
+      }
+    }
+
+    .IndexPage-Right-Content {
+      height: calc(~"100% - 50px");
+      overflow-y: auto;
+      position: relative;
+
+      .optionsConfig {
+        border-bottom: 1px solid #e1e1e1;
+        padding-bottom: 10px;
+        margin: 8px 0 18px 0;
+
+        .configOptions {
+          .addOption {
+            padding-left: 20px;
+            margin-top: 10px;
+          }
+
+          .optionData {
+            margin-top: 10px;
+
+            .option {
+              width: 100px;
+            }
+
+            .optionMessage {
+              width: calc(~"100% - 20px");
+              margin-left: 20px;
+              margin-top: 8px;
+              display: block;
+            }
+
+            .delOption {
+              margin-left: 10px;
+              color: red;
+              font-size: 20px;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .configRemote {
+          .remoteItem {
+            width: 100%;
+            margin-top: 10px;
+          }
+        }
+      }
+
+      .empty {
+        position: absolute;
+        text-align: center;
+        height: 20px;
+        font-size: 20px;
+        top: 50%;
+        width: 100%;
+        margin-top: -10px;
+        color: #ccc;
+      }
+    }
+  }
+}
+
+.mobileModalWrap {
+  .ant-modal-content {
+    height: 800px;
+    background: url("../assets/mobileWrap.png") no-repeat 0 0;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    box-shadow: none;
+
+    .ant-modal-close {
+      right: -20px;
+      top: 0;
+    }
+
+    .ant-modal-body {
+      border-radius: 10px 10px 50px 50px;
+      width: calc(~"100% - 30px");
+      margin: 40px auto 10px auto;
+      height: calc(~"100% - 50px");
+      max-height: 100%;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  }
+}
