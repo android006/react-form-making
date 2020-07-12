@@ -1,0 +1,93 @@
+@import "../../less/variables";
+
+@headerHeight: 40px;
+@headerSmallHeight: 35px;
+.myCollapseSmall {
+  .myCollapse-header {
+    height: @headerSmallHeight !important;
+    .myCollapse-header-title {
+      font-size: 15px !important;
+      .myCollapse-header-title-text{
+        height: @headerSmallHeight !important;
+        line-height: @headerSmallHeight !important;
+        background-color: transparent !important;
+        position: relative;
+        &::before{
+          content: "";
+          position: absolute;
+          width: 4px;
+          height: 60%;
+          top: 20%;
+          left: 0;
+          background: #009AFF;
+        }
+      }
+    }
+  }
+}
+
+.myCollapse {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 4px;
+  .myCollapse-header {
+    width: 100%;
+    height: @headerHeight;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #E1E9F5;
+    .myCollapse-header-title {
+      display: flex;
+      align-items: center;
+      font-style: normal;
+      font-size: 18px;
+      font-family: Adobe Heiti Std R;
+      font-weight: bold;
+      color: rgba(0, 0, 0, 1);
+      .myCollapse-header-title-text {
+        height: @headerHeight;
+        line-height: @headerHeight;
+        padding: 0 16px;
+        text-align: center;
+        background-color: #DFEFFD;
+        border-top-left-radius: @base-radius;
+        border-top-right-radius: @base-radius;
+        letter-spacing: 2px;
+      }
+      .myCollapse-header-title-icon {
+        width: 22px;
+        height: 22px;
+        line-height: 22px;
+        text-align: center;
+        background: rgba(44, 52, 63, .1);
+        margin-left: 14px;
+        color: rgba(0, 0, 0, .4);
+        font-size: 12px;
+        i {
+          transition: transform .1s;
+          transform: rotate(0deg);
+        }
+
+      }
+      .myCollapse-header-title-icon-active {
+        i {
+          transform: rotate(90deg);
+        }
+      }
+    }
+    .myCollapse-header-btn {
+      display: flex;
+      background: #F8F9FD;
+      align-items: center;
+    }
+  }
+  .myCollapse-content {
+    width: 100%;
+    height: auto;
+    transition: height 0.35s;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+}
