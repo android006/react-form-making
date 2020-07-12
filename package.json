@@ -1,6 +1,6 @@
 {
   "name": "react-form-making",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "基于React.js，使表单开发简单高效。",
   "main": "index.js",
   "scripts": {
@@ -59,13 +59,9 @@
     "antd-mobile": "^2.3.1",
     "babel-polyfill": "^6.23.0",
     "babel-runtime": "^6.9.2",
-    "dva": "^1.2.1",
-    "dva-loading": "^0.2.1",
     "es6-promise": "^4.1.0",
     "immutability-helper": "^3.1.1",
     "isomorphic-fetch": "^2.2.1",
-    "lodash": "^4.17.15",
-    "mockjs": "^1.0.1-beta3",
     "moment": "^2.20.1",
     "prop-types": "^15.7.2",
     "rc-form": "^2.4.11",

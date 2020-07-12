@@ -3,7 +3,6 @@ import PublicService from "../services/PublicService";
 require('es6-promise').polyfill();
 import 'isomorphic-fetch';
 import Util from './Util';
-import {hashHistory} from 'dva/router';
 import config from '../config';
 
 function parseJSON(response) {
@@ -11,14 +10,6 @@ function parseJSON(response) {
 }
 
 function checkStatus(response) {
-  // token超期
-  if (response.status === 401) {
-    return hashHistory.push({
-      pathname: '/login',
-      state: {loginOut: true, message: "登录过期，请重新登录", messageType: "error"}
-    });
-  }
-
   if (response.status >= 200 && response.status < 300) {
     return response;
   }
