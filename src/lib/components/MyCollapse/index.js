@@ -3,7 +3,7 @@
  */
 import React, {Component} from 'react';
 import {Tooltip, Divider, Icon, Spin} from 'antd';
-import MyIcon from '../MyIcon/index';
+import MyIcon from '../MyIcon';
 import './index.less';
 
 class MyCollapse extends Component {

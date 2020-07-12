@@ -1,7 +1,7 @@
 /* Created By SJ 2019-05-22 */
 import React, {Component, PropTypes} from 'react';
 import {Icon, Carousel} from 'antd';
-import MyIcon from "../MyIcon/index";
+import MyIcon from "../MyIcon";
 import './index.less';
 
 // 图片回廊

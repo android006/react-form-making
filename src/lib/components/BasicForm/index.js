@@ -7,12 +7,12 @@ import {
   Radio, Upload, Icon, InputNumber, message, Modal, Switch, TimePicker
 } from 'antd';
 import moment from "moment";
-import MyCollapse from "../MyCollapse/index";
+import MyCollapse from "../MyCollapse";
 import ModalPictureGallery from "../ModalPictureGallery";
-import PublicService from "../../services/PublicService";
+import PublicService from "../../../services/PublicService";
 import './index.less';
-import request from "../../utils/request";
-import config from "../../config";
+import request from "../../../utils/request";
+import config from "../../../config";
 
 const {RangePicker, MonthPicker, WeekPicker} = DatePicker;
 const RadioGroup = Radio.Group;

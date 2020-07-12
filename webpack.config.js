@@ -4,7 +4,7 @@ module.exports = {
   entry: './src/index.js', //入口文件路径
   output: {
     filename: 'main.js',
-    library: 'nsc-components',
+    library: 'react-form-making',
     libraryTarget: 'umd',
     libraryExport: 'default'
   },

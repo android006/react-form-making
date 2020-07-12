@@ -3,7 +3,7 @@
  */
 import React, {Component} from 'react';
 import MyModal from '../MyModal';
-import PictureGallery from "../PictureGallery/index";
+import PictureGallery from "../PictureGallery";
 import './index.less';
 
 class ModalPictureGallery extends Component {

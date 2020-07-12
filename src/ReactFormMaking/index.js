@@ -5,12 +5,12 @@ import Box from "./Drap/Box";
 import Dustbin from "./Drap/Dustbin";
 import ReactJson from 'react-json-view';
 import {DragDropContext} from 'react-dnd';
-import MyModal from "../components/MyModal";
-import MyIcon from "../components/MyIcon/index";
-import WidgetForm from "../components/WidgetForm";
-import BasicForm from "../components/BasicForm/index";
-import MobileWidgetForm from "../components/MobileWidgetForm";
-import FormItem from "../components/WidgetForm/FormItem/index";
+import MyModal from "../lib/components/MyModal";
+import MyIcon from "../lib/components/MyIcon/index";
+import WidgetForm from "../lib/components/WidgetForm";
+import BasicForm from "../lib/components/BasicForm/index";
+import MobileWidgetForm from "../lib/components/MobileWidgetForm";
+import FormItem from "../lib/components/WidgetForm/FormItem/index";
 import HTML5Backend, {NativeTypes} from 'react-dnd-html5-backend';
 import {basicComponents, advanceComponents, layoutComponents} from "./componentsConfig";
 
