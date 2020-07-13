@@ -6,7 +6,7 @@ import { Icon } from 'antd';
 import './index.less';
 
 const IconFont = Icon.createFromIconfontCN({
-  scriptUrl: '//at.alicdn.com/t/font_1926621_65559e29ra6.css',
+  scriptUrl: '//at.alicdn.com/t/font_1926621_4fxwqdz9bi3.js',
 });
 
 export default class MyIcon extends Component {
