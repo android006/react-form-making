@@ -1,19 +1,19 @@
 {
   "name": "react-form-making",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "基于React.js，使表单开发简单高效。",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js -p",
-    "prepublish": "npm run build",
-    "files": [
-      "dist"
-    ]
+    "prepublish": "npm run build"
   },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/android006/react-form-making.git"
+    "url": "https://github.com/android006/react-form-making.git"
   },
   "author": "",
   "license": "ISC",
@@ -62,6 +62,7 @@
     "es6-promise": "^4.1.0",
     "immutability-helper": "^3.1.1",
     "isomorphic-fetch": "^2.2.1",
+    "mobile-widget-form": "^1.0.2",
     "moment": "^2.20.1",
     "prop-types": "^15.7.2",
     "rc-form": "^2.4.11",
@@ -69,12 +70,13 @@
     "react-dnd-html5-backend": "^2.5.4",
     "react-draggable": "^3.3.0",
     "react-json-view": "^1.19.1",
-    "webpack": "^4.43.0"
+    "webpack": "^4.43.0",
+    "widget-form": "^1.0.1"
   },
   "peerDependencies": {
-    "antd": "^3.22.0",
+    "antd": "^3.26.1",
     "prop-types": "^15.7.2",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0"
   }
 }

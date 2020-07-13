@@ -4,13 +4,12 @@ import moment from "moment";
 import Box from "./Drap/Box";
 import Dustbin from "./Drap/Dustbin";
 import ReactJson from 'react-json-view';
+import {WidgetForm, WidgetFormItem} from "widget-form";
 import {DragDropContext} from 'react-dnd';
 import MyModal from "../lib/components/MyModal";
+import {MobileWidgetForm} from "mobile-widget-form";
 import MyIcon from "../lib/components/MyIcon/index";
-import WidgetForm from "../lib/components/WidgetForm";
 import BasicForm from "../lib/components/BasicForm/index";
-import MobileWidgetForm from "../lib/components/MobileWidgetForm";
-import FormItem from "../lib/components/WidgetForm/FormItem/index";
 import HTML5Backend, {NativeTypes} from 'react-dnd-html5-backend';
 import {basicComponents, advanceComponents, layoutComponents} from "./componentsConfig";
 
@@ -336,7 +335,7 @@ class IndexPage extends Component {
 
     return (
       t.renderWidgetItem(item, index, (
-        <div className="configItem"><FormItem data={item} form={form} formItemLayout={formItemLayout}/></div>
+        <div className="configItem"><WidgetFormItem data={item} form={form} formItemLayout={formItemLayout}/></div>
       ))
     )
   });
